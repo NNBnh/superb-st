@@ -1,0 +1,3 @@
+[submodule "st-flexipatch"]
+	path = st-flexipatch
+	url = https://github.com/bakkeby/st-flexipatch
