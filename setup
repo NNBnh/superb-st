@@ -1,0 +1,14 @@
+#!/bin/sh
+
+
+CWD=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
+
+bsymlink "$CWD/st-flexipatch" "$CWD/st"
+ln -sf "$CWD/patches.h" "$CWD/config.h" "$CWD/config.mk" "$CWD/st/"
+
+cd "$CWD/st" || exit 1
+sudo make install
+cd "$CWD" || exit 1
+
+
+exit 0

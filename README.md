@@ -25,7 +25,7 @@
   - [`w3m`](https://st.suckless.org/patches/w3m)
   - [`workingdir`](https://st.suckless.org/patches/workingdir)
   - St-embedder
-  - [Emoji](https://www.youtube.com/watch?v=f9qNXV01yzg)
+  - [Color emoji](https://gitlab.freedesktop.org/xorg/lib/libxft/-/merge_requests/1)
 
 > *Maybe even [Kitty's Extensions to the xterm protocol](https://sw.kovidgoyal.net/kitty/protocol-extensions.html).*
 
