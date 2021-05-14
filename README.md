@@ -1,6 +1,6 @@
 <h1 align="center"><i>SuperB ST</i></h1>
 <p align="center">ST-base terminal with enough patches</p>
-<p align="center"><img src="https://user-images.githubusercontent.com/43980777/115989432-85c1d300-a5e8-11eb-9eb9-974865659754.png"></p>
+<p align="center"><img src=""></p>
 <p align="center"><a href="https://github.com/NNBnh/superbst/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-mit--1.1-%23F7CA88.svg?labelColor=585858&style=for-the-badge&logoColor=FFFFFF" alt="License: MIT"></a> <a href="https://st.suckless.org"><img src="https://img.shields.io/badge/st-0.8.4-%23F7CA88.svg?labelColor=585858&style=for-the-badge&logoColor=FFFFFF" alt="ST 0.8.4"></a></p>
 <p align="center"><a href="https://github.com/NNBnh/superbst/watchers"><img src="https://img.shields.io/github/watchers/NNBnh/superbst?labelColor=585858&color=F7CA88&style=flat-square"></a> <a href="https://github.com/NNBnh/superbst/stargazers"><img src="https://img.shields.io/github/stars/NNBnh/superbst?labelColor=585858&color=F7CA88&style=flat-square"></a> <a href="https://github.com/NNBnh/superbst/network/members"><img src="https://img.shields.io/github/forks/NNBnh/superbst?labelColor=585858&color=F7CA88&style=flat-square"></a> <a href="https://github.com/NNBnh/superbst/issues"><img src="https://img.shields.io/github/issues/NNBnh/superbst?labelColor=585858&color=F7CA88&style=flat-square"></a></p>
 
