@@ -1,13 +1,27 @@
 #!/bin/sh
 
+# sudo xbps-install -S pkgconf pkg-config autoconf xorgproto xorg-util-macros freetype-devel fontconfig-devel libX11-devel libXext-devel libXrender-devel ncurses st-terminfo
+
 
 CWD=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
 
-bsymlink "$CWD/st-flexipatch" "$CWD/st"
-ln -sf "$CWD/patches.h" "$CWD/config.h" "$CWD/config.mk" "$CWD/st/"
+cd "$CWD" || exit 1
+git pulll
+
+bsymlink "$CWD/st-flexipatch" "$CWD/st" && printf '\n\033[1;7;92m%s\033[0m\n' 'Symlinked st-flexipatch/'
+ln -sf "$CWD/patches.h" "$CWD/config.h" "$CWD/config.mk" "$CWD/st/" && printf '\n\033[1;7;92m%s\033[0m\n' 'Symlinked config to st-flexipatch/'
+
+# bsymlink "$CWD/libxft" "$CWD/libxft-bgra" && printf '\n\033[1;7;92m%s\033[0m\n' 'Symlinked libxft/'
+# rm -rf "$CWD/libxft-bgrad/include"
+
+# cd "$CWD/libxft-bgra" || exit 1
+# git checkout 'bgra-glyphs'
+# sh autogen.sh --sysconfdir='/etc' --prefix='/usr' --mandir='/usr/share/man'
+# sudo make -f Makefile.am && printf '\n\033[1;7;92m%s\033[0m\n' 'Maked libxft-bgra'
 
 cd "$CWD/st" || exit 1
-sudo make install
+sudo make install && printf '\n\033[1;7;92m%s\033[0m\n' 'Maked st'
+
 cd "$CWD" || exit 1
 
 
