@@ -8,8 +8,9 @@ CWD=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
 cd "$CWD" || exit 1
 git pulll
 
-bsymlink "$CWD/st-flexipatch" "$CWD/st" && printf '\n\033[1;7;92m%s\033[0m\n' 'Symlinked st-flexipatch/'
-ln -sf "$CWD/patches.h" "$CWD/config.h" "$CWD/config.mk" "$CWD/st/" && printf '\n\033[1;7;92m%s\033[0m\n' 'Symlinked config to st-flexipatch/'
+mkdir -p "$CWD/st"
+bsymlink "$CWD/st-flexipatch" "$CWD/st"
+ln -sf "$CWD/patches.h" "$CWD/config.h" "$CWD/config.mk" "$CWD/st/"
 
 # bsymlink "$CWD/libxft" "$CWD/libxft-bgra" && printf '\n\033[1;7;92m%s\033[0m\n' 'Symlinked libxft/'
 # rm -rf "$CWD/libxft-bgrad/include"
@@ -21,8 +22,6 @@ ln -sf "$CWD/patches.h" "$CWD/config.h" "$CWD/config.mk" "$CWD/st/" && printf '\
 
 cd "$CWD/st" || exit 1
 sudo make install && printf '\n\033[1;7;92m%s\033[0m\n' 'Maked st'
-
-cd "$CWD" || exit 1
 
 
 exit 0
