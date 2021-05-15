@@ -23,14 +23,14 @@
   - Drawing:
     - [`bold-is-not-bright`](https://st.suckless.org/patches/bold-is-not-bright)
     - [`sync`](https://st.suckless.org/patches/sync)
-    - [`w3m`](https://st.suckless.org/patches/w3m) *([Graphics rendering](https://sw.kovidgoyal.net/kitty/protocol-extensions.html#graphics-rendering))*
+    - [`w3m`](https://st.suckless.org/patches/w3m) *([Graphics rendering](https://sw.kovidgoyal.net/kitty/graphics-protocol.html))*
   - Escape sequences:
     - [`osc_10_11_12_2`](https://st.suckless.org/patches/osc_10_11_12_2)
     - [`blinking_cursor`](https://st.suckless.org/patches/blinking_cursor)
     - [`undercurl`](https://st.suckless.org/patches/undercurl)
 - Other:
   - [`workingdir`](https://st.suckless.org/patches/workingdir)
-  - [`fix_keyboard_input`](https://st.suckless.org/patches/fix_keyboard_input) *([Keyboard handling](https://sw.kovidgoyal.net/kitty/protocol-extensions.html#keyboard-handling))*
+  - [`fix_keyboard_input`](https://st.suckless.org/patches/fix_keyboard_input) *([Kitty terminal's "A protocol for comprehensive keyboard handling in terminals"](https://sw.kovidgoyal.net/kitty/keyboard-protocol.html))*
 
 [Color emoji](https://gitlab.freedesktop.org/xorg/lib/libxft/-/merge_requests/1)
 
