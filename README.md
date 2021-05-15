@@ -11,6 +11,7 @@
 
 ### ✨ Features
 - Window:
+<<<<<<< HEAD
   - [`anysize`](https://st.suckless.org/patches/anysize): allows the terminal to resize to any pixel size and centers the content of the terminal
   - [`relativeborder`](https://st.suckless.org/patches/relativeborder): allows users to specify a border that is relative in size to the width of a cell in the terminal
   - [`themed_cursor`](https://st.suckless.org/patches/themed_cursor): use the xterm cursor from your cursor theme
@@ -26,6 +27,32 @@
   - [`osc_10_11_12_2`](https://st.suckless.org/patches/osc_10_11_12_2): to modify the background, foreground and cursor colors
   - [`blinking_cursor`](https://st.suckless.org/patches/blinking_cursor): to modify cursor style
   - [`undercurl`](https://st.suckless.org/patches/undercurl): to render special underlines
+=======
+  - [`alpha`](https://st.suckless.org/patches/alpha)
+  - [`anysize`](https://st.suckless.org/patches/anysize)
+  - [`relativeborder`](https://st.suckless.org/patches/relativeborder)
+  - [`themed_cursor`](https://st.suckless.org/patches/themed_cursor)
+- Rendering:
+  - Font:
+    - [`vertcenter`](https://st.suckless.org/patches/vertcenter)
+    - [`ligatures`](https://st.suckless.org/patches/ligatures)
+    - [`wide_glyphs`](https://www.reddit.com/r/suckless/comments/jt90ai/update_support_for_proper_glyph_rendering_in_st)
+  - Drawing:
+    - [`bold-is-not-bright`](https://st.suckless.org/patches/bold-is-not-bright)
+    - [`sync`](https://st.suckless.org/patches/sync)
+    - [`w3m`](https://st.suckless.org/patches/w3m) *([Graphics rendering](https://sw.kovidgoyal.net/kitty/graphics-protocol.html))*
+  - Escape sequences:
+    - [`osc_10_11_12_2`](https://st.suckless.org/patches/osc_10_11_12_2)
+    - [`blinking_cursor`](https://st.suckless.org/patches/blinking_cursor)
+    - [`undercurl`](https://st.suckless.org/patches/undercurl)
+- Other:
+  - [`workingdir`](https://st.suckless.org/patches/workingdir)
+  - [`fix_keyboard_input`](https://st.suckless.org/patches/fix_keyboard_input) *([Kitty terminal's "A protocol for comprehensive keyboard handling in terminals"](https://sw.kovidgoyal.net/kitty/keyboard-protocol.html))*
+
+[Color emoji](https://gitlab.freedesktop.org/xorg/lib/libxft/-/merge_requests/1)
+
+[AppImage](https://appimage.github.io/appimagetool)
+>>>>>>> fc077b0545da7ab17f29fb8e0a48fce261d82cb9
 
 ## 💌 Credits
 Special thanks to:
