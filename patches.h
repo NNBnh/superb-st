@@ -16,5 +16,6 @@
 #define UNDERCURL_PATCH                  1
 
 #define SCROLLBACK_MOUSE_ALTSCREEN_PATCH 1
+#define CLIPBOARD_PATCH                  1
 #define XRESOURCES_PATCH                 1
 #define XRESOURCES_RELOAD_PATCH          1
