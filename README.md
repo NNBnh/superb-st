@@ -18,6 +18,7 @@
 - Font:
   - [`wide_glyphs`](https://www.reddit.com/r/suckless/comments/jt90ai/update_support_for_proper_glyph_rendering_in_st): support proper glyph rendering
   - [`ligatures`](https://st.suckless.org/patches/ligatures): support proper ligatures rendering
+  - [`boxdraw`](https://st.suckless.org/patches/boxdraw): custom rendering of lines and blocks (but not braille) characters for gapless alignment
 - Drawing:
   - [`bold-is-not-bright`](https://st.suckless.org/patches/bold-is-not-bright): makes bold text rendered simply as bold, leaving the color unaffected
   - [`sync`](https://st.suckless.org/patches/sync): better draw timing to reduce flicker/tearing and improve animation smoothness
@@ -26,6 +27,10 @@
   - [`osc_10_11_12_2`](https://st.suckless.org/patches/osc_10_11_12_2): to modify the background, foreground and cursor colors
   - [`blinking_cursor`](https://st.suckless.org/patches/blinking_cursor): to modify cursor style
   - [`undercurl`](https://st.suckless.org/patches/undercurl): to render special underlines
+- Beginner friendly:
+  - [`scrollback`](https://st.suckless.org/patches/scrollback): scroll back through terminal output using mouse wheel
+  - [`clipboard`](https://st.suckless.org/patches/clipboard): support clipboard copy and paste
+  - [`xresources`](https://st.suckless.org/patches/xresources): adds the ability to configure ST via [Xresources](https://wiki.archlinux.org/title/X_resources)
 
 ## 💌 Credits
 Special thanks to:
