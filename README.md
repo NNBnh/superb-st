@@ -22,7 +22,7 @@
 - [True colors](https://gist.github.com/XVilka/8346728) support
 - [Color emoji](https://gitlab.freedesktop.org/xorg/lib/libxft/-/merge_requests/1) support
 - Graphics rendering support ([W3M](http://w3m.sourceforge.net))
-- Even more Escape sequences support
+- Even more escape sequences support
 - XIM support
 - Beginner friendly features:
   - Scrollback support and clipboard handling:
@@ -64,7 +64,6 @@
 ### 📥 Installation
 #### 🔧 Manually
 Run the following commands:
-
 ```sh
 git clone https://github.com/NNBnh/superb-st
 cd superb-st
@@ -82,7 +81,6 @@ sudo make install
 
 #### 📦 Package manager
 For [`nix`](https://nixos.org) user:
-
 ```sh
 #TODO
 ```
@@ -90,7 +88,16 @@ For [`nix`](https://nixos.org) user:
 > *If you can and want to port SuperB ST to other package managers, feel free to do so.*
 
 ## ⌨️ Keybinds
+- Font size:
+  - <kbd>Ctrl</kbd> + <kbd>MouseWheel up</kbd> : increase font size
+  - <kbd>Ctrl</kbd> + <kbd>MouseWheel down</kbd> : decrease font size
+  - <kbd>Ctrl</kbd> + <kbd>MouseWheel button</kbd> : reset font size
+  - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>=</kbd> : increase font size
+  - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>-</kbd> : decrease font size
+  - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>'</kbd> : reset font size
 - Scrollback:
+  - <kbd>MouseWheel up</kbd> : scroll up
+  - <kbd>MouseWheel down</kbd> : scroll down
   - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>i</kbd> : scroll up a line
   - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>k</kbd> : scroll down a line
   - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>u</kbd> : scroll up a page
@@ -100,7 +107,38 @@ For [`nix`](https://nixos.org) user:
   - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>v</kbd> : paste texts from clipboard to ther terminal
 
 ## ⚙️ Configuration
-`#TODO`
+You can config SuperB ST with outside tools like [`bui-terminal`](https://github.com/NNBnh/bui-terminal) + [`bt`](https://github.com/NNBnh/bt) (recommended) or with [Xresources](https://wiki.archlinux.org/title/X_resources):
+```Xresources
+*font:         <STRING>:pixelsize=<FLOAT>:antialias=<BOOLEAN>:autohint=<BOOLEAN>
+*color0:       #<HEX>
+*color1:       #<HEX>
+*color2:       #<HEX>
+*color3:       #<HEX>
+*color4:       #<HEX>
+*color5:       #<HEX>
+*color6:       #<HEX>
+*color7:       #<HEX>
+*color8:       #<HEX>
+*color9:       #<HEX>
+*color10:      #<HEX>
+*color11:      #<HEX>
+*color12:      #<HEX>
+*color13:      #<HEX>
+*color14:      #<HEX>
+*color15:      #<HEX>
+*background:   #<HEX>
+*foreground:   #<HEX>
+*cursorColor:  #<HEX>
+*alpha:        <FLOAT>
+*borderperc:   <INTEGER>
+*termname:     <STRING>
+*shell:        <STRING>
+*minlatency:   <INTEGER>
+*maxlatency:   <INTEGER>
+*blinktimeout: <INTEGER>
+*bellvolume:   <INTEGER>
+*tabspaces:    <INTEGER>
+```
 
 ## 💌 Credits
 Special thanks to:
