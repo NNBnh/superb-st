@@ -5,11 +5,18 @@
 <p align="center"><a href="https://github.com/NNBnh/superbst/watchers"><img src="https://img.shields.io/github/watchers/NNBnh/superbst?labelColor=585858&color=F7CA88&style=flat-square"></a> <a href="https://github.com/NNBnh/superbst/stargazers"><img src="https://img.shields.io/github/stars/NNBnh/superbst?labelColor=585858&color=F7CA88&style=flat-square"></a> <a href="https://github.com/NNBnh/superbst/network/members"><img src="https://img.shields.io/github/forks/NNBnh/superbst?labelColor=585858&color=F7CA88&style=flat-square"></a> <a href="https://github.com/NNBnh/superbst/issues"><img src="https://img.shields.io/github/issues/NNBnh/superbst?labelColor=585858&color=F7CA88&style=flat-square"></a></p>
 
 ## 💡 About
-**SuperB ST** is a *SuperB* [ST-base](https://st.suckless.org) terminal using [ST-flexipatch](https://github.com/bakkeby/st-flexipatch) to patch only the features that can't be integrate using programs.
+**SuperB ST** is a *SuperB* [ST-base](https://st.suckless.org) terminal using [ST-flexipatch](https://github.com/bakkeby/st-flexipatch) to add enough patches so it can be compared with other modern terminal like [Alacritty](https://github.com/alacritty/alacritty) and [Kitty](https://sw.kovidgoyal.net/kitty)
 
-<p align="center"><a href="https://github.com/NNBnh/superbst/releases"><img src="https://img.shields.io/badge/downloads-%23F7CA88.svg?style=for-the-badge&logoColor=FFFFFF" alt="Downloads"></a></p>
+<p align="center"><a href="https://github.com/NNBnh/superb-st/releases"><img src="https://img.shields.io/github/downloads/NNBnh/superb-st/total?color=F7CA88&labelColor=585858&style=for-the-badge&logoColor=FFFFFF" alt="Downloads"></a></p>
 
 ### ✨ Features
+- **Goal**:
+  - Patch features that only the terminal can do
+- **Non goal**:
+  - Patch features that conflict with the terminal multiplexer or some windows manager's features
+  - Patch features that can be integrate using other tools/programs
+
+### 🩹 Patches
 - Window:
   - [`anysize`](https://st.suckless.org/patches/anysize): allows the terminal to resize to any pixel size and centers the content of the terminal
   - [`relativeborder`](https://st.suckless.org/patches/relativeborder): allows users to specify a border that is relative in size to the width of a cell in the terminal
@@ -18,7 +25,7 @@
 - Font:
   - [`wide_glyphs`](https://www.reddit.com/r/suckless/comments/jt90ai/update_support_for_proper_glyph_rendering_in_st): support proper glyph rendering
   - [`ligatures`](https://st.suckless.org/patches/ligatures): support proper ligatures rendering
-  - [`boxdraw`](https://st.suckless.org/patches/boxdraw): custom rendering of lines and blocks (but not braille) characters for gapless alignment
+  - [`boxdraw`](https://st.suckless.org/patches/boxdraw): custom rendering of lines and blocks (but not braille e.g: `⠞⠓⠊⠎`) characters for gapless alignment
 - Drawing:
   - [`bold-is-not-bright`](https://st.suckless.org/patches/bold-is-not-bright): makes bold text rendered simply as bold, leaving the color unaffected
   - [`sync`](https://st.suckless.org/patches/sync): better draw timing to reduce flicker/tearing and improve animation smoothness
@@ -31,6 +38,42 @@
   - [`scrollback`](https://st.suckless.org/patches/scrollback): scroll back through terminal output using mouse wheel
   - [`clipboard`](https://st.suckless.org/patches/clipboard): support clipboard copy and paste
   - [`xresources`](https://st.suckless.org/patches/xresources): adds the ability to configure ST via [Xresources](https://wiki.archlinux.org/title/X_resources)
+
+## 🚀 Setup
+### 🧾 Dependencies
+- [`fontconfig`](https://archlinux.org/packages/extra/x86_64/fontconfig) and [`libx11`](https://archlinux.org/packages/extra/x86_64/libx11) are make dependencies
+- [`libxft-bgra`](https://aur.archlinux.org/packages/libxft-bgra) is make dependencies for color emoji support
+
+### 📥 Installation
+#### 🔧 Manually
+Run the following commands:
+
+```sh
+git clone https://github.com/NNBnh/superb-st
+cd superb-st
+
+git submodule update --init --recursive
+git pull origin $(git branch-name)
+
+mkdir -p st
+bsymlink st-flexipatch st
+ln -sf patches.h config.h config.mk st/
+
+cd st
+sudo make install
+```
+
+#### 📦 Package manager
+For [`nix`](https://nixos.org) user:
+
+```sh
+#TODO
+```
+
+> *If you can and want to port SuperB ST to other package managers, feel free to do so.*
+
+## ⚙️ Configuration
+
 
 ## 💌 Credits
 Special thanks to:
