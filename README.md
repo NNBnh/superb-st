@@ -5,16 +5,33 @@
 <p align="center"><a href="https://github.com/NNBnh/superbst/watchers"><img src="https://img.shields.io/github/watchers/NNBnh/superbst?labelColor=585858&color=F7CA88&style=flat-square"></a> <a href="https://github.com/NNBnh/superbst/stargazers"><img src="https://img.shields.io/github/stars/NNBnh/superbst?labelColor=585858&color=F7CA88&style=flat-square"></a> <a href="https://github.com/NNBnh/superbst/network/members"><img src="https://img.shields.io/github/forks/NNBnh/superbst?labelColor=585858&color=F7CA88&style=flat-square"></a> <a href="https://github.com/NNBnh/superbst/issues"><img src="https://img.shields.io/github/issues/NNBnh/superbst?labelColor=585858&color=F7CA88&style=flat-square"></a></p>
 
 ## 💡 About
-**SuperB ST** is a *SuperB* [ST-base](https://st.suckless.org) terminal using [ST-flexipatch](https://github.com/bakkeby/st-flexipatch) to add enough patches so it can be compared with other modern terminal like [Alacritty](https://github.com/alacritty/alacritty) and [Kitty](https://sw.kovidgoyal.net/kitty)
-
-<p align="center"><a href="https://github.com/NNBnh/superb-st/releases"><img src="https://img.shields.io/github/downloads/NNBnh/superb-st/total?color=F7CA88&labelColor=585858&style=for-the-badge&logoColor=FFFFFF" alt="Downloads"></a></p>
-
-### ✨ Features
+**SuperB ST** is a *SuperB* [ST-base](https://st.suckless.org) terminal using [ST-flexipatch](https://github.com/bakkeby/st-flexipatch) to add enough patches so it can be compared with other modern terminal like [Alacritty](https://github.com/alacritty/alacritty) and [Kitty](https://sw.kovidgoyal.net/kitty):
 - **Goal**:
   - Patch features that only the terminal can do
 - **Non goal**:
   - Patch features that conflict with the terminal multiplexer or some windows manager's features
   - Patch features that can be integrate using other tools/programs
+
+<p align="center"><a href="https://github.com/NNBnh/superb-st/releases"><img src="https://img.shields.io/github/downloads/NNBnh/superb-st/total?color=F7CA88&labelColor=585858&style=for-the-badge&logoColor=FFFFFF" alt="Downloads"></a></p>
+
+### ✨ Features
+- Resize to any pixel size and centers the content
+- Configurable background's opacity
+- Wide-character support
+- Fonts ligatures support
+- [True colors](https://gist.github.com/XVilka/8346728) support
+- [Color emoji](https://gitlab.freedesktop.org/xorg/lib/libxft/-/merge_requests/1) support
+- Graphics rendering support ([W3M](http://w3m.sourceforge.net))
+- Even more Escape sequences support
+- XIM support
+- Beginner friendly features:
+  - Scrollback support and clipboard handling:
+    > Although these basic and important features can be achieved using other programs, there aren't many programs that just only these features.<br>
+    > Currently they are only be supported properly by some terminal multiplexer (like [Tmux](https://github.com/tmux/tmux/wiki) which come with many bloated features conflict with the windows manager).<br>
+    > Looking forward to [scroll](https://tools.suckless.org/scroll).
+  - [Xresources](https://wiki.archlinux.org/title/X_resources) support:
+    > Although terminal configuration can be approached using escape sequences with tool like [`bui-terminal`](https://github.com/NNBnh/bui-terminal), some aspect of the terminal can't be change using escape sequences (e.g: font, background's opacity...).<br>
+    > Font and bg's opacity can be config with startup flags using [`bt`](https://github.com/NNBnh/bt), still it isn't cover every options.
 
 ### 🩹 Patches
 - Window:
@@ -24,7 +41,7 @@
   - [`alpha`](https://st.suckless.org/patches/alpha): allows users to only change the opacity of the background (unlike using the composite manager to change the opacity of the whole windows)
 - Font:
   - [`wide_glyphs`](https://www.reddit.com/r/suckless/comments/jt90ai/update_support_for_proper_glyph_rendering_in_st): support proper glyph rendering
-  - [`ligatures`](https://st.suckless.org/patches/ligatures): support proper ligatures rendering
+  - [`ligatures`](https://st.suckless.org/patches/ligatures): support ligatures rendering
   - [`boxdraw`](https://st.suckless.org/patches/boxdraw): custom rendering of lines and blocks (but not braille e.g: `⠞⠓⠊⠎`) characters for gapless alignment
 - Drawing:
   - [`bold-is-not-bright`](https://st.suckless.org/patches/bold-is-not-bright): makes bold text rendered simply as bold, leaving the color unaffected
@@ -72,8 +89,18 @@ For [`nix`](https://nixos.org) user:
 
 > *If you can and want to port SuperB ST to other package managers, feel free to do so.*
 
-## ⚙️ Configuration
+## ⌨️ Keybinds
+- Scrollback:
+  - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>i</kbd> : scroll up a line
+  - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>k</kbd> : scroll down a line
+  - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>u</kbd> : scroll up a page
+  - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>o</kbd> : scroll down a page
+- Clipboard handling:
+  - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd> : copy selected texts to clipboard
+  - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>v</kbd> : paste texts from clipboard to ther terminal
 
+## ⚙️ Configuration
+`#TODO`
 
 ## 💌 Credits
 Special thanks to:
