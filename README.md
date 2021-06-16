@@ -21,7 +21,7 @@
 - Fonts ligatures support
 - [True colors](https://gist.github.com/XVilka/8346728) support
 - [Color emoji](https://gitlab.freedesktop.org/xorg/lib/libxft/-/merge_requests/1) support
-- Graphics rendering support ([W3M](http://w3m.sourceforge.net))
+- Graphics rendering support ([SIXEL](https://en.wikipedia.org/wiki/Sixel) and [W3M](http://w3m.sourceforge.net))
 - Even more escape sequences support
 - XIM support
 - Beginner friendly features:
@@ -46,7 +46,8 @@
 - Drawing:
   - [`bold-is-not-bright`](https://st.suckless.org/patches/bold-is-not-bright): makes bold text rendered simply as bold, leaving the color unaffected
   - [`sync`](https://st.suckless.org/patches/sync): better draw timing to reduce flicker/tearing and improve animation smoothness
-  - [`w3m`](https://st.suckless.org/patches/w3m): support w3m images hack
+  - [`sixel`](https://gist.github.com/saitoha/70e0fdf22e3e8f63ce937c7f7da71809): support [SIXEL](https://en.wikipedia.org/wiki/Sixel) graphics
+  - [`w3m`](https://st.suckless.org/patches/w3m): support [W3M](http://w3m.sourceforge.net) graphics
 - Escape sequences:
   - [`osc_10_11_12_2`](https://st.suckless.org/patches/osc_10_11_12_2): to modify the background, foreground and cursor colors
   - [`blinking_cursor`](https://st.suckless.org/patches/blinking_cursor): to modify cursor style
