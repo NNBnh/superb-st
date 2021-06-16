@@ -9,6 +9,7 @@
 
 #define BOLD_IS_NOT_BRIGHT_PATCH         1
 #define SYNC_PATCH                       1
+#define SIXEL_PATCH                      1
 #define W3M_PATCH                        1
 
 #define OSC_10_11_12_2_PATCH             1
