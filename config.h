@@ -9,7 +9,7 @@ static char *font = "Monospace:pixelsize=12:antialias=true:autohint=true";
 #if FONT2_PATCH
 /* Spare fonts */
 static char *font2[] = {
-/*	"Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true", */
+	"Monospace:pixelsize=12:antialias=true:autohint=true",
 /*	"Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true", */
 };
 #endif // FONT2_PATCH
@@ -21,6 +21,10 @@ int borderperc = 20;
 #else
 static int borderpx = 2;
 #endif // RELATIVEBORDER_PATCH
+
+#if OPENURLONCLICK_PATCH
+static char *url_opener = "xdg-open";
+#endif // OPENURLONCLICK_PATCH
 
 #if OPENURLONCLICK_PATCH
 static char *url_opener = "xdg-open";
@@ -327,18 +331,14 @@ static uint forcemousemod = ShiftMask;
  * Beware that overloading Button1 will disable the selection.
  */
 static MouseShortcut mshortcuts[] = {
-	{ ControlMask,          Button4, zoom,           {.f =  +1} },
-	{ ControlMask,          Button5, zoom,           {.f =  -1} },
+	{ ControlMask,          Button4, zoom,           {.f = +1} },
+	{ ControlMask,          Button5, zoom,           {.f = -1} },
+	{ ControlMask,          Button2, zoomreset,      {.f =  0} },
 	#if UNIVERSCROLL_PATCH
 	/* mask                 button   function        argument       release   alt */
 	#else
 	/* mask                 button   function        argument       release */
 	#endif // UNIVERSCROLL_PATCH
-	#if CLIPBOARD_PATCH
-	{ XK_ANY_MOD,           Button2, clippaste,      {.i = 0},      1 },
-	#else
-	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
-	#endif // CLIPBOARD_PATCH
 	#if SCROLLBACK_MOUSE_PATCH
 	{ ShiftMask,            Button4, kscrollup,      {.i = 1} },
 	{ ShiftMask,            Button5, kscrolldown,    {.i = 1} },
@@ -361,11 +361,6 @@ static MouseShortcut mshortcuts[] = {
 #if SCROLLBACK_MOUSE_ALTSCREEN_PATCH
 static MouseShortcut maltshortcuts[] = {
 	/* mask                 button   function        argument       release */
-	#if CLIPBOARD_PATCH
-	{ XK_ANY_MOD,           Button2, clippaste,      {.i = 0},      1 },
-	#else
-	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
-	#endif // CLIPBOARD_PATCH
 	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
 	{ XK_ANY_MOD,           Button5, ttysend,        {.s = "\005"} },
 };
@@ -387,9 +382,9 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,          XK_Print,       toggleprinter,   {.i =  0} },
 	{ ShiftMask,            XK_Print,       printscreen,     {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,       printsel,        {.i =  0} },
-	{ TERMMOD,              XK_Prior,       zoom,            {.f = +1} },
-	{ TERMMOD,              XK_Next,        zoom,            {.f = -1} },
-	{ TERMMOD,              XK_Home,        zoomreset,       {.f =  0} },
+	{ ControlMask,          XK_equal,       zoom,            {.f = +1} },
+	{ ControlMask,          XK_minus,       zoom,            {.f = -1} },
+	{ ControlMask,          XK_apostrophe,  zoomreset,       {.f =  0} },
 	{ TERMMOD,              XK_C,           clipcopy,        {.i =  0} },
 	{ TERMMOD,              XK_V,           clippaste,       {.i =  0} },
 	#if SCROLLBACK_PATCH

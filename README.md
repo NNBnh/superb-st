@@ -70,7 +70,7 @@ git clone https://github.com/NNBnh/superb-st
 git clone https://github.com/bakkeby/st-flexipatch
 
 cd superb-st
-ln -sf patches.h config.h config.mk ../st-flexipatch/
+cp -f patches.h config.h config.mk ../st-flexipatch/
 
 cd ../st-flexipatch/
 sudo make install
@@ -94,16 +94,12 @@ For [`arch`](https://archlinux.org) user:
   - <kbd>Ctrl</kbd> + <kbd>MouseWheel up</kbd> : increase font size
   - <kbd>Ctrl</kbd> + <kbd>MouseWheel down</kbd> : decrease font size
   - <kbd>Ctrl</kbd> + <kbd>MouseWheel button</kbd> : reset font size
-  - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>=</kbd> : increase font size
-  - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>-</kbd> : decrease font size
-  - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>'</kbd> : reset font size
+  - <kbd>Ctrl</kbd> + <kbd>=</kbd> : increase font size
+  - <kbd>Ctrl</kbd> + <kbd>-</kbd> : decrease font size
+  - <kbd>Ctrl</kbd> + <kbd>'</kbd> : reset font size
 - Scrollback:
   - <kbd>MouseWheel up</kbd> : scroll up
   - <kbd>MouseWheel down</kbd> : scroll down
-  - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>i</kbd> : scroll up a line
-  - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>k</kbd> : scroll down a line
-  - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>u</kbd> : scroll up a page
-  - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>o</kbd> : scroll down a page
 - Clipboard handling:
   - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd> : copy selected texts to clipboard
   - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>v</kbd> : paste texts from clipboard to ther terminal
@@ -111,35 +107,35 @@ For [`arch`](https://archlinux.org) user:
 ## ⚙️ Configuration
 You can config SuperB ST with outside tools like [`bui-terminal`](https://github.com/NNBnh/bui-terminal) + [`bt`](https://github.com/NNBnh/bt) (recommended) or with [Xresources](https://wiki.archlinux.org/title/X_resources):
 ```Xresources
-*font:         <STRING>:pixelsize=<FLOAT>:antialias=<BOOLEAN>:autohint=<BOOLEAN>
-*color0:       #<HEX>
-*color1:       #<HEX>
-*color2:       #<HEX>
-*color3:       #<HEX>
-*color4:       #<HEX>
-*color5:       #<HEX>
-*color6:       #<HEX>
-*color7:       #<HEX>
-*color8:       #<HEX>
-*color9:       #<HEX>
-*color10:      #<HEX>
-*color11:      #<HEX>
-*color12:      #<HEX>
-*color13:      #<HEX>
-*color14:      #<HEX>
-*color15:      #<HEX>
-*background:   #<HEX>
-*foreground:   #<HEX>
-*cursorColor:  #<HEX>
-*alpha:        <FLOAT>
-*borderperc:   <INTEGER>
-*termname:     <STRING>
-*shell:        <STRING>
-*minlatency:   <INTEGER>
-*maxlatency:   <INTEGER>
-*blinktimeout: <INTEGER>
-*bellvolume:   <INTEGER>
-*tabspaces:    <INTEGER>
+*.font:         <STRING>:pixelsize=<FLOAT>:antialias=<BOOLEAN>:autohint=<BOOLEAN>
+*.color0:       #<HEX>
+*.color1:       #<HEX>
+*.color2:       #<HEX>
+*.color3:       #<HEX>
+*.color4:       #<HEX>
+*.color5:       #<HEX>
+*.color6:       #<HEX>
+*.color7:       #<HEX>
+*.color8:       #<HEX>
+*.color9:       #<HEX>
+*.color10:      #<HEX>
+*.color11:      #<HEX>
+*.color12:      #<HEX>
+*.color13:      #<HEX>
+*.color14:      #<HEX>
+*.color15:      #<HEX>
+*.background:   #<HEX>
+*.foreground:   #<HEX>
+*.cursorColor:  #<HEX>
+*.alpha:        <FLOAT>
+*.borderperc:   <INTEGER>
+*.termname:     <STRING>
+*.shell:        <STRING>
+*.minlatency:   <INTEGER>
+*.maxlatency:   <INTEGER>
+*.blinktimeout: <INTEGER>
+*.bellvolume:   <INTEGER>
+*.tabspaces:    <INTEGER>
 ```
 
 ## 💌 Credits
