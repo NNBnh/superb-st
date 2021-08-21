@@ -70,7 +70,7 @@
 #### 🔧 Manually
 Option 1: download
 
-<p align="center"><a href="https://github.com/NNBnh/superb-st/releases"><img src="https://img.shields.io/github/downloads/NNBnh/superb-st/total?color=3978A8&labelColor=39314B&style=for-the-badge&logoColor=FFFFFF" alt="Downloads"></a></p>
+<p align="center"><a href="https://github.com/NNBnh/superb-st/releases"><img src="https://img.shields.io/github/downloads/NNBnh/superb-st/total?color=3978A8&labelColor=39314B&style=for-the-badge" alt="Downloads"></a></p>
 
 and move it to `~/.local/bin/`. Or using `curl`:
 
