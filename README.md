@@ -11,8 +11,6 @@
   - Patch features that conflict with the terminal multiplexer or some windows manager's features
   - Patch features that can be integrate using other tools/programs
 
-<p align="center"><a href="https://github.com/NNBnh/superb-st/releases"><img src="https://img.shields.io/github/downloads/NNBnh/superb-st/total?color=3978A8&labelColor=39314B&style=for-the-badge&logoColor=FFFFFF" alt="Downloads"></a></p>
-
 ### ✨ Features
 - Resize to any pixel size and centers the content
 - Configurable background's opacity
@@ -66,9 +64,27 @@
 - [`fontconfig`](https://archlinux.org/packages/extra/x86_64/fontconfig) and [`libx11`](https://archlinux.org/packages/extra/x86_64/libx11) are make dependencies
 - [`libxft-bgra`](https://aur.archlinux.org/packages/libxft-bgra) is make dependencies for color emoji support
 
+> *Make dependencies only needed when compile.*
+
 ### 📥 Installation
 #### 🔧 Manually
-Run the following commands:
+Option 1: download
+
+<p align="center"><a href="https://github.com/NNBnh/superb-st/releases"><img src="https://img.shields.io/github/downloads/NNBnh/superb-st/total?color=3978A8&labelColor=39314B&style=for-the-badge&logoColor=FFFFFF" alt="Downloads"></a></p>
+
+and move it to `~/.local/bin/`. Or using `curl`:
+
+```sh
+curl -L https://github.com/NNBnh/superb-st/releases/download/1.0.0/st > ~/.local/bin/st
+```
+
+make sure to make the file executable:
+
+```sh
+chmod +x ~/.local/bin/st
+```
+
+Option 2: compile
 ```sh
 git clone https://github.com/NNBnh/superb-st
 git clone https://github.com/bakkeby/st-flexipatch
