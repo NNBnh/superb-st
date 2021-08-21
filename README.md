@@ -55,7 +55,10 @@
 - Beginner friendly:
   - [`scrollback`](https://st.suckless.org/patches/scrollback): scroll back through terminal output using mouse wheel.
   - [`clipboard`](https://st.suckless.org/patches/clipboard): support clipboard copy and paste.
-  - [`xresources`](https://st.suckless.org/patches/xresources): adds the ability to configure ST via [Xresources](https://wiki.archlinux.org/title/X_resources).
+  - [`xresources`](https://st.suckless.org/patches/xresources): adds the ability to configure ST via [Xresources](https://wiki.archlinux.org/title/X_resources)
+
+> *The Xresources config will reload when a `SIGUSR1` signal is received:*
+> `killall -USR1 st`
 
 ## 🚀 Setup
 ### 🧾 Dependencies
