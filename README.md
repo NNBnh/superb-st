@@ -34,27 +34,28 @@
 
 ### 🩹 Patches
 - Window:
-  - [`anysize`](https://st.suckless.org/patches/anysize): allows the terminal to resize to any pixel size and centers the content of the terminal
-  - [`relativeborder`](https://st.suckless.org/patches/relativeborder): allows users to specify a border that is relative in size to the width of a cell in the terminal
-  - [`themed_cursor`](https://st.suckless.org/patches/themed_cursor): use the xterm cursor from your cursor theme
-  - [`alpha`](https://st.suckless.org/patches/alpha): allows users to only change the opacity of the background (unlike using the composite manager to change the opacity of the whole windows)
+  - [`anysize`](https://st.suckless.org/patches/anysize): allows the terminal to resize to any pixel size and centers the content of the terminal.
+  - [`relativeborder`](https://st.suckless.org/patches/relativeborder): allows users to specify a border that is relative in size to the width of a cell in the terminal.
+  - [`themed_cursor`](https://st.suckless.org/patches/themed_cursor): use the xterm cursor from your cursor theme.
+  - [`alpha`](https://st.suckless.org/patches/alpha): allows users to only change the opacity of the background (unlike using the composite manager to change the opacity of the whole windows).
 - Font:
-  - [`wide_glyphs`](https://www.reddit.com/r/suckless/comments/jt90ai/update_support_for_proper_glyph_rendering_in_st): support proper glyph rendering
-  - [`ligatures`](https://st.suckless.org/patches/ligatures): support ligatures rendering
-  - [`boxdraw`](https://st.suckless.org/patches/boxdraw): custom rendering of lines and blocks (but not braille e.g: `⠞⠓⠊⠎`) characters for gapless alignment
+  - [`wide_glyphs`](https://www.reddit.com/r/suckless/comments/jt90ai/update_support_for_proper_glyph_rendering_in_st): support proper glyph rendering.
+  - [`ligatures`](https://st.suckless.org/patches/ligatures): support ligatures rendering.
+  - [`boxdraw`](https://st.suckless.org/patches/boxdraw): custom rendering of lines and blocks (but not braille e.g: `⠞⠓⠊⠎`) characters for gapless alignment.
 - Drawing:
-  - [`bold-is-not-bright`](https://st.suckless.org/patches/bold-is-not-bright): makes bold text rendered simply as bold, leaving the color unaffected
-  - [`sync`](https://st.suckless.org/patches/sync): better draw timing to reduce flicker/tearing and improve animation smoothness
-  - [`sixel`](https://gist.github.com/saitoha/70e0fdf22e3e8f63ce937c7f7da71809): support [SIXEL](https://en.wikipedia.org/wiki/Sixel) graphics
-  - [`w3m`](https://st.suckless.org/patches/w3m): support [W3M](http://w3m.sourceforge.net) graphics
+  - [`bold-is-not-bright`](https://st.suckless.org/patches/bold-is-not-bright): makes bold text rendered simply as bold, leaving the color unaffected.
+  - [`sync`](https://st.suckless.org/patches/sync): better draw timing to reduce flicker/tearing and improve animation smoothness.
+  - [`sixel`](https://gist.github.com/saitoha/70e0fdf22e3e8f63ce937c7f7da71809): support [SIXEL](https://en.wikipedia.org/wiki/Sixel) graphics.
+  - [`w3m`](https://st.suckless.org/patches/w3m): support [W3M](http://w3m.sourceforge.net) graphics.
 - Escape sequences:
-  - [`osc_10_11_12_2`](https://st.suckless.org/patches/osc_10_11_12_2): to modify the background, foreground and cursor colors
-  - [`blinking_cursor`](https://st.suckless.org/patches/blinking_cursor): to modify cursor style
-  - [`undercurl`](https://st.suckless.org/patches/undercurl): to render special underlines
+  - [`osc_10_11_12_2`](https://st.suckless.org/patches/osc_10_11_12_2): to modify the background, foreground and cursor colors.
+  - [`blinking_cursor`](https://st.suckless.org/patches/blinking_cursor): to modify cursor style.
+  - [`undercurl`](https://st.suckless.org/patches/undercurl): to render special underlines.
+  - [`csi_22_23`](https://st.suckless.org/patches/csi_22_23): to save and restore window title.
 - Beginner friendly:
-  - [`scrollback`](https://st.suckless.org/patches/scrollback): scroll back through terminal output using mouse wheel
-  - [`clipboard`](https://st.suckless.org/patches/clipboard): support clipboard copy and paste
-  - [`xresources`](https://st.suckless.org/patches/xresources): adds the ability to configure ST via [Xresources](https://wiki.archlinux.org/title/X_resources)
+  - [`scrollback`](https://st.suckless.org/patches/scrollback): scroll back through terminal output using mouse wheel.
+  - [`clipboard`](https://st.suckless.org/patches/clipboard): support clipboard copy and paste.
+  - [`xresources`](https://st.suckless.org/patches/xresources): adds the ability to configure ST via [Xresources](https://wiki.archlinux.org/title/X_resources).
 
 ## 🚀 Setup
 ### 🧾 Dependencies
@@ -66,21 +67,22 @@
 Run the following commands:
 ```sh
 git clone https://github.com/NNBnh/superb-st
+git clone https://github.com/bakkeby/st-flexipatch
+
 cd superb-st
+ln -sf patches.h config.h config.mk ../st-flexipatch/
 
-git submodule update --init --recursive
-git pull origin $(git branch-name)
-
-mkdir -p st
-bsymlink st-flexipatch st
-ln -sf patches.h config.h config.mk st/
-
-cd st
+cd ../st-flexipatch/
 sudo make install
 ```
 
 #### 📦 Package manager
 For [`nix`](https://nixos.org) user:
+```sh
+#TODO
+```
+
+For [`arch`](https://archlinux.org) user:
 ```sh
 #TODO
 ```

@@ -1,6 +1,0 @@
-[submodule "st-flexipatch"]
-	path = st-flexipatch
-	url = https://github.com/bakkeby/st-flexipatch
-[submodule "libxft"]
-	path = libxft
-	url = https://gitlab.freedesktop.org/mawww/libxft.git

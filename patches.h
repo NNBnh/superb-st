@@ -15,7 +15,9 @@
 #define OSC_10_11_12_2_PATCH             1
 #define BLINKING_CURSOR_PATCH            1
 #define UNDERCURL_PATCH                  1
+#define CSI_22_23_PATCH                  1
 
+#define SCROLLBACK_PATCH                 1
 #define SCROLLBACK_MOUSE_ALTSCREEN_PATCH 1
 #define CLIPBOARD_PATCH                  1
 #define XRESOURCES_PATCH                 1
