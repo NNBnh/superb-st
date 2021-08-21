@@ -58,6 +58,7 @@
   - [`xresources`](https://st.suckless.org/patches/xresources): adds the ability to configure ST via [Xresources](https://wiki.archlinux.org/title/X_resources)
 
 > *The Xresources config will reload when a `SIGUSR1` signal is received:*
+>
 > `killall -USR1 st`
 
 ## 🚀 Setup
