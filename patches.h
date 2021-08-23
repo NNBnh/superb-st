@@ -5,7 +5,6 @@
 
 #define WIDE_GLYPHS_PATCH                1
 #define LIGATURES_PATCH                  1
-#define BOXDRAW_PATCH                    1
 
 #define BOLD_IS_NOT_BRIGHT_PATCH         1
 #define SYNC_PATCH                       1
