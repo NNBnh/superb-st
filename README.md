@@ -160,7 +160,7 @@ You can config SuperB ST with outside tools like [`bui-terminal`](https://github
 ## 💌 Credits
 Special thanks to:
 - [**ST**](https://st.suckless.org) by [`suckless.org`](https://suckless.org)
-- [ST-flexipatch](https://github.com/bakkeby/st-flexipatch) by [Stein Gunnar Bakkeby](https://github.com/bakkeby)
+- [**ST-flexipatch**](https://github.com/bakkeby/st-flexipatch) by [Stein Gunnar Bakkeby](https://github.com/bakkeby)
 
 <br><br><br><br>
 
