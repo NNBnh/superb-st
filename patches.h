@@ -1,4 +1,7 @@
+/* #FIXME https://github.com/bakkeby/st-flexipatch/issues/35
 #define ANYSIZE_PATCH                    1
+*/
+#define ANYSIZE_SIMPLE_PATCH             1
 #define RELATIVEBORDER_PATCH             1
 #define THEMED_CURSOR_PATCH              1
 #define ALPHA_PATCH                      1
