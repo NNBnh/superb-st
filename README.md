@@ -4,7 +4,9 @@
 <p align="center"><a href="https://github.com/NNBnh/superbst/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-mit--1.1-%233978A8.svg?labelColor=39314B&style=for-the-badge&logoColor=FFFFFF" alt="License: MIT"></a> <a href="https://st.suckless.org"><img src="https://img.shields.io/badge/st_version-0.8.4-%233978A8.svg?labelColor=39314B&style=for-the-badge&logoColor=FFFFFF" alt="ST version: 0.8.4"></a></p>
 
 ## 💡 About
-**SuperB ST** is a *SuperB* [ST-base](https://st.suckless.org) terminal using [ST-flexipatch](https://github.com/bakkeby/st-flexipatch) to add enough patches so it can be compared with other modern terminal like [Alacritty](https://github.com/alacritty/alacritty) and [Kitty](https://sw.kovidgoyal.net/kitty):
+
+**SuperB ST** is a _SuperB_ [ST-base](https://st.suckless.org) terminal using [ST-flexipatch](https://github.com/bakkeby/st-flexipatch) to add enough patches so it can be compared with other modern terminal like [Alacritty](https://github.com/alacritty/alacritty) and [Kitty](https://sw.kovidgoyal.net/kitty):
+
 - **Goal**:
   - Patch features that only the terminal can do
 - **Non goal**:
@@ -12,6 +14,7 @@
   - Patch features that can be integrate using other tools/programs
 
 ### ✨ Features
+
 - Resize to any pixel size and centers the content
 - Configurable background's opacity
 - Wide-character support
@@ -31,6 +34,7 @@
     > Font and bg's opacity can be config with startup flags using [`bt`](https://github.com/NNBnh/bt), still it isn't cover every options.
 
 ### 🩹 Patches
+
 - Window:
   - [`anysize`](https://st.suckless.org/patches/anysize): allows the terminal to resize to any pixel size and centers the content of the terminal.
   - [`relativeborder`](https://st.suckless.org/patches/relativeborder): allows users to specify a border that is relative in size to the width of a cell in the terminal.
@@ -54,19 +58,23 @@
   - [`clipboard`](https://st.suckless.org/patches/clipboard): support clipboard copy and paste.
   - [`xresources`](https://st.suckless.org/patches/xresources): adds the ability to configure ST via [Xresources](https://wiki.archlinux.org/title/X_resources)
 
-> *The Xresources config will reload when a `SIGUSR1` signal is received:*
+> _The Xresources config will reload when a `SIGUSR1` signal is received:_
 >
 > `killall -USR1 st`
 
 ## 🚀 Setup
+
 ### 🧾 Dependencies
+
 - [`fontconfig`](https://archlinux.org/packages/extra/x86_64/fontconfig) and [`libx11`](https://archlinux.org/packages/extra/x86_64/libx11) are make dependencies
 - [`libxft-bgra`](https://aur.archlinux.org/packages/libxft-bgra) is make dependencies for color emoji support
 
-> *Make dependencies only needed when compile.*
+> _Make dependencies only needed when compile._
 
 ### 📥 Installation
+
 #### 🔧 Manually
+
 Option 1: download
 
 <p align="center"><a href="https://github.com/NNBnh/superb-st/releases"><img src="https://img.shields.io/github/downloads/NNBnh/superb-st/total?color=3978A8&labelColor=39314B&style=for-the-badge" alt="Downloads"></a></p>
@@ -84,6 +92,7 @@ chmod +x ~/.local/bin/st
 ```
 
 Option 2: compile
+
 ```sh
 git clone https://github.com/NNBnh/superb-st
 git clone https://github.com/bakkeby/st-flexipatch
@@ -96,19 +105,23 @@ sudo make install
 ```
 
 #### 📦 Package manager
+
 For [`nix`](https://nixos.org) user:
+
 ```sh
 #TODO
 ```
 
 For [`arch`](https://archlinux.org) user:
+
 ```sh
 #TODO
 ```
 
-> *If you can and want to port SuperB ST to other package managers, feel free to do so.*
+> _If you can and want to port SuperB ST to other package managers, feel free to do so._
 
 ## ⌨️ Keybinds
+
 - Font size:
   - <kbd>Ctrl</kbd> + <kbd>MouseWheel up</kbd> : increase font size
   - <kbd>Ctrl</kbd> + <kbd>MouseWheel down</kbd> : decrease font size
@@ -124,8 +137,12 @@ For [`arch`](https://archlinux.org) user:
   - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>v</kbd> : paste texts from clipboard to ther terminal
 
 ## ⚙️ Configuration
-You can config SuperB ST with outside tools like [`bui-terminal`](https://github.com/NNBnh/bui-terminal) + [`bt`](https://github.com/NNBnh/bt) (recommended) or with [Xresources](https://wiki.archlinux.org/title/X_resources):
+
+You can config SuperB ST with outside tools like [`bui-terminal`](https://github.com/NNBnh/bui-terminal) or with [Xresources](https://wiki.archlinux.org/title/X_resources):
+
 ```Xresources
+! ~/.config/X11/xresources
+
 *.font:         <STRING>:pixelsize=<FLOAT>:antialias=<BOOLEAN>:autohint=<BOOLEAN>
 *.color0:       #<HEX>
 *.color1:       #<HEX>
@@ -157,8 +174,14 @@ You can config SuperB ST with outside tools like [`bui-terminal`](https://github
 *.tabspaces:    <INTEGER>
 ```
 
+```sh
+xrdb -load ~/.config/X11/xresources; killall -USR1 'st'
+```
+
 ## 💌 Credits
+
 Special thanks to:
+
 - [**ST**](https://st.suckless.org) by [`suckless.org`](https://suckless.org)
 - [**ST-flexipatch**](https://github.com/bakkeby/st-flexipatch) by [Stein Gunnar Bakkeby](https://github.com/bakkeby)
 
@@ -168,4 +191,4 @@ Special thanks to:
 
 > <h1 align="center">Made with ❤️ by <a href="https://github.com/NNBnh"><i>NNB</i></a></h1>
 >
-> <p align="center"><a href="https://www.buymeacoffee.com/nnbnh"><img src="https://img.shields.io/badge/buy_me_a_coffee%20-%23F7CA88.svg?logo=buy-me-a-coffee&logoColor=333333&style=for-the-badge" alt="Buy Me a Coffee"></a></p>
+> <p align="center"><a href="https://www.buymeacoffee.com/nnbnh"><img src="https://img.shields.io/badge/buy_me_a_coffee%20-%23FFC387.svg?logo=buy-me-a-coffee&logoColor=333333&style=for-the-badge" alt="Buy Me a Coffee"></a></p>
