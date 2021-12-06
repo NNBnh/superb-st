@@ -175,7 +175,8 @@ You can config SuperB ST with outside tools like [`bui-terminal`](https://github
 ```
 
 ```sh
-xrdb -load ~/.config/X11/xresources; killall -USR1 'st'
+xrdb -load ~/.config/X11/xresources
+killall -USR1 'st'
 ```
 
 ## 💌 Credits
