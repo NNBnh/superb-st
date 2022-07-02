@@ -58,9 +58,7 @@
   - [`clipboard`](https://st.suckless.org/patches/clipboard): support clipboard copy and paste.
   - [`xresources`](https://st.suckless.org/patches/xresources): adds the ability to configure ST via [Xresources](https://wiki.archlinux.org/title/X_resources)
 
-> _The Xresources config will reload when a `SIGUSR1` signal is received:_
->
-> `killall -USR1 st`
+> **Note** The Xresources config will reload when a `SIGUSR1` signal is received: `killall -USR1 st`
 
 ## 🚀 Setup
 
